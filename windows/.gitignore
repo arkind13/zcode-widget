@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+build_test/
+client_secret*.json
+authorized_user*.json
+resize_debug.log
+stderr.log

@@ -1,0 +1,47 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+DerivedData/
+!DerivedData/.gitkeep
+
+# Build artifacts
+build/
+.build/
+*.app/
+*.dylib
+*.so
+*.framework
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+!.swiftpm/Package.swift
+
+# macOS
+.DS_Store
+*.log
+
+# XcodeGen
+*.xcodeproj/
+
+# IDE
+.idea/
+.vscode/
+
+# Temporary
+*.tmp
+*.bak
+
+# Secrets / personal data — never commit (the widget reads these at
+# runtime from ~/.zcode-widget/, never from the repo)
+client_secret*.json
+authorized_user*.json
+resize_debug.log
+stderr.log
+.venv/
+__pycache__/
+*.pyc
+build_test/

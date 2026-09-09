@@ -1,0 +1,15 @@
+#!/bin/bash
+# ZCode Widget launcher script
+# Place this file in your PATH (e.g., ~/bin/zcode-widget)
+# Make it executable: chmod +x zcode-widget
+
+APP_PATH="/Users/tushershikder/.zcode/workspace/default/zcode-widget/build/Build/Products/Debug/ZCodeWidget.app"
+
+# Kill existing instance first to avoid duplicates
+pkill -f "ZCodeWidget" 2>/dev/null
+
+# Small delay to let the old process exit
+sleep 0.3
+
+# Launch the app
+open "$APP_PATH"

@@ -1,0 +1,27 @@
+name: ZCodeWidget
+options:
+  bundleName: ZCodeWidget
+  defaultConfig: Debug
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    GENERATE_INFOPLIST_FILE: NO
+    INFOPLIST_FILE: Resources/Info.plist
+packages:
+  GRDB:
+    url: https://github.com/groue/GRDB.swift
+    from: "6.24.0"
+targets:
+  ZCodeWidget:
+    type: application
+    platform: macOS
+    sources: [Sources/ZCodeWidget]
+    resources: [Resources]
+    dependencies:
+      - package: GRDB
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.zcode.widget
+        INFOPLIST_FILE: Resources/Info.plist
+        LD_RUNPATH_SEARCH_PATHS: "@executable_path/../Frameworks"
